@@ -1,9 +1,5 @@
 import React, { useRef } from "react";
-import { TodoProps } from "../App";
-
-interface TodoInputProps {
-  handleAddTodos: (todo: TodoProps) => void;
-}
+import { TodoProps, TodoInputProps } from "../types";
 
 const TodoInput: React.FC<TodoInputProps> = props => {
   const textInputRef = useRef<HTMLInputElement>(null);

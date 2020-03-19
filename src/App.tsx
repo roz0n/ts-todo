@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import TodoList from "../src/components/TodoList";
 import TodoInput from "./components/TodoInput";
-
-export interface TodoProps {
-  id: number;
-  label: string;
-  done: boolean;
-}
+import { TodoProps } from "./types";
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<TodoProps[]>([]);
