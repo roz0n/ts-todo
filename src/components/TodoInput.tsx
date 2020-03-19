@@ -14,8 +14,10 @@ const TodoInput: React.FC<TodoInputProps> = props => {
       done: false
     };
 
-    props.handleAddTodos(newTodo);
-    textInputRef.current!.value = "";
+    if (inputValue) {
+      props.handleAddTodos(newTodo);
+      textInputRef.current!.value = "";
+    }
   };
 
   return (
